@@ -51,6 +51,10 @@ fun Shop.getCustomersSortedByNumberOfOrders(): List<Customer>
 fun Customer.getTotalOrderPrice(): Double
     = this.orders.flatMap { order -> order.products }.sumByDouble { product -> product.price }
 
-fun main(args: Array<String>) {
+// Return a map of the customers living in each city
+fun Shop.groupCustomersByCity(): Map<City, List<Customer>>
+    = this.customers.groupBy { customer -> customer.city }
 
+fun main(args: Array<String>) {
+    println(shop.groupCustomersByCity())
 }
