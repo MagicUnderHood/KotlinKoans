@@ -1,3 +1,5 @@
+package conventions.overloading
+
 import java.util.Calendar
 
 fun MyDate.addTimeIntervals(timeInterval: TimeInterval, number: Int): MyDate {
@@ -8,5 +10,9 @@ fun MyDate.addTimeIntervals(timeInterval: TimeInterval, number: Int): MyDate {
         TimeInterval.WEEK -> c.add(Calendar.WEEK_OF_MONTH, number)
         TimeInterval.YEAR -> c.add(Calendar.YEAR, number)
     }
-    return MyDate(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE))
+    return MyDate(
+        c.get(Calendar.YEAR),
+        c.get(Calendar.MONTH),
+        c.get(Calendar.DATE)
+    )
 }
