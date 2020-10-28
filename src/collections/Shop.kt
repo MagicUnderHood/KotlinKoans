@@ -1,4 +1,4 @@
-package collections.introduction
+package collections
 
 data class Shop(val name: String, val customers: List<Customer>)
 
