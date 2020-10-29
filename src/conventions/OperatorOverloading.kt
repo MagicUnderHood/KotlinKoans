@@ -1,6 +1,6 @@
-package conventions.overloading
+package conventions
 
-import conventions.overloading.TimeInterval.*
+import conventions.TimeInterval.*
 
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)
 
